@@ -12,7 +12,7 @@ public class GetContent {
 	private static final String HTTP_METHOD_GET = "GET";
 	private static final int HTTP_PORT = 80 ;
 	private static final String PROTOCOL_VERSION = "HTTP/1.1";
-	private static final String HOST_NAME = "google.bg";
+	private static final String HOST_NAME = "abv.bg";
 	
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		final GetContent example = new GetContent();
