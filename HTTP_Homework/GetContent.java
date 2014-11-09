@@ -8,7 +8,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 
-public class GetContent {
+public class ReturnAvailableContent {
 	private static final String HTTP_METHOD_GET = "GET";
 	private static final int HTTP_PORT = 80 ;
 	private static final String PROTOCOL_VERSION = "HTTP/1.1";
@@ -20,7 +20,7 @@ public class GetContent {
 				HTTP_METHOD_GET, "/index.html");
 		String statusLine = new String(response.getStatusLine());
 		System.out.println(statusLine);
-		if(statusLine.indexOf("301")>0 || statusLine.indexOf("302")>0){
+		while(statusLine.indexOf("301")>0 || statusLine.indexOf("302")>0){
 			for (HttpHeader next : response.getHeaders()) {
 				
 				System.out.printf("%s: %s\n", next.getName(), next.getValue());
@@ -37,7 +37,7 @@ public class GetContent {
 				}
 			}
 		}
-
+		
 	}
 	
 	public CharacterHttpResponse createRequest(String host, String method,
