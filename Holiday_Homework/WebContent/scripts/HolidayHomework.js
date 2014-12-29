@@ -23,5 +23,9 @@ $(document).ready(function() {
 	// Task 8	
 	var $element = $("<ul id='posts'></ul>");
 	var div = $("div#dynamiccontent");
-	div.append($element);	
+	div.append($element);
+	// Task 9
+	$("ul#menu-top-level-menu.menu li#menu-item-last").click(function(){
+		alert("Hello World");
+	});
 });
