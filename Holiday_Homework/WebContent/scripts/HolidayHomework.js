@@ -12,4 +12,8 @@ $(document).ready(function() {
 	var $element = $("<div id=dynamiccontent></div>");
 	var div = $("div#footer");
 	div.prepend($element);
+	// Task 6
+	var $element = $("<input id='textinput'>");
+	var div = $("div#dynamiccontent");
+	div.append($element);
 });
