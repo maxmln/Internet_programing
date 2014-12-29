@@ -20,4 +20,8 @@ $(document).ready(function() {
 	var $element = $("<button id='addbutton'>Add</button>");
 	var div = $("div#dynamiccontent");
 	div.append($element);
+	// Task 8	
+	var $element = $("<ul id='posts'></ul>");
+	var div = $("div#dynamiccontent");
+	div.append($element);	
 });
