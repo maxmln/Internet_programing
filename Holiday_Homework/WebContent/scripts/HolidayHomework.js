@@ -8,4 +8,8 @@ $(document).ready(function() {
 	var $element = $("<li id='menu-item-last' > <a href=>new button</a></li>");
 	var list = $("ul#menu-top-level-menu");
 	list.append($element);
+	// Task 5
+	var $element = $("<div id=dynamiccontent></div>");
+	var div = $("div#footer");
+	div.prepend($element);
 });
