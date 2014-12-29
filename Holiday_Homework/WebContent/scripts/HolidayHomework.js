@@ -27,5 +27,7 @@ $(document).ready(function() {
 	// Task 9
 	$("ul#menu-top-level-menu.menu li#menu-item-last").click(function(){
 		alert("Hello World");
+		// Task 10
+		$("div#col2").insertBefore("div#col1");
 	});
 });
