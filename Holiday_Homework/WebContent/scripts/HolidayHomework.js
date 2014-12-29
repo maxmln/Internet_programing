@@ -60,4 +60,44 @@ $(document).ready(function() {
 	$.ajax("http://jsonplaceholder.typicode.com/posts", {
 		method: "GET"
 	}).then(getPosts);
+	
+   
+	
+	var checkForText = function() {
+                var name = $("input#textinput").val();
+               // Task 12
+                if(!name) {
+                        alert("you must enter text");
+                        return;
+                }else{
+                // Task 13
+                         $.ajax('http://jsonplaceholder.typicode.com/posts', {
+                                  method: 'POST',
+                                  data: {
+                                            title: 'newTitle',
+                                            body: name,
+                                            userId: 1,
+                                  }
+                                }).then(function(data) {
+                                        console.log("Data send")
+                                        
+                                        //Task 14 and 15
+                                        var id = ($(data).attr("id"))
+                                        $.ajax('http://jsonplaceholder.typicode.com/posts'+id, {
+                                                method: "GET"  
+                                                }).then(function(dataResponse){
+                                                        var list = $("#posts");
+                                                        var i = 0;
+                                                                var newElement = $("<li>");
+                                                                newElement.append($(dataResponse).attr("body"));
+                                                                newElement.append("</li>")
+                                                                newElement.append("<button id='xbtn'>x</button>")
+                                                                list.append(newElement);
+                                                               
+                                                       
+                                                });
+                });
+        }
+};
+ $("button#addbutton").click(checkForText);
 });
