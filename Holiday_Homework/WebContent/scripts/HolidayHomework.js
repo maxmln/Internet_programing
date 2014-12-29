@@ -62,42 +62,50 @@ $(document).ready(function() {
 	}).then(getPosts);
 	
    
-	
-	var checkForText = function() {
-                var name = $("input#textinput").val();
-               // Task 12
+	// Task 12
+	$("button#addbutton").click(function() {
+				var count = 0;
+				var name = $('input#textinput').val();
+               
                 if(!name) {
                         alert("you must enter text");
                         return;
-                }else{
-                // Task 13
+                }else{ //Task 13
+						var newId=0;
+						count++;
                          $.ajax('http://jsonplaceholder.typicode.com/posts', {
                                   method: 'POST',
                                   data: {
-                                            title: 'newTitle',
-                                            body: name,
+                                            title: name,
+                                            body: 'body',
                                             userId: 1,
+											id: (100+count)
                                   }
                                 }).then(function(data) {
                                         console.log("Data send")
-                                        
-                                        //Task 14 and 15
+										newId = data.id;
+										
+                                        //Task 14
                                         var id = ($(data).attr("id"))
-                                        $.ajax('http://jsonplaceholder.typicode.com/posts'+id, {
+                                        $.ajax('http://jsonplaceholder.typicode.com/posts'+newId, {
                                                 method: "GET"  
-                                                }).then(function(dataResponse){
-                                                        var list = $("#posts");
-                                                        var i = 0;
-                                                                var newElement = $("<li>");
-                                                                newElement.append($(dataResponse).attr("body"));
-                                                                newElement.append("</li>")
-                                                                newElement.append("<button id='xbtn'>x</button>")
+                                                }).then(function(data2){
+                                                        var list = $("ul#posts");
+														
+                                                                var newElement = $("<li>"+(data.title)+"</li><button id='delete"+count+"' >X</button>");
                                                                 list.append(newElement);
+																
+														// Task 15
+														for(var i=1;i<=count;i++){
+															$("button#delete"+i).click(function(){
+																alert("deleting");
+																throw new Error("error");
+															});
+														}
                                                                
                                                        
                                                 });
                 });
         }
-};
- $("button#addbutton").click(checkForText);
+});
 });
