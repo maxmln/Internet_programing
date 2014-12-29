@@ -16,4 +16,8 @@ $(document).ready(function() {
 	var $element = $("<input id='textinput'>");
 	var div = $("div#dynamiccontent");
 	div.append($element);
+	// Task 7
+	var $element = $("<button id='addbutton'>Add</button>");
+	var div = $("div#dynamiccontent");
+	div.append($element);
 });
