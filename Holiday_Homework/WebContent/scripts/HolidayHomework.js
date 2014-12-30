@@ -129,8 +129,13 @@ $(document).ready(function() {
 	
 	
 	// Task 18
-
-	$("input#newInput").on('change',function(){	
+	var z = 0;
+	$("input#newInput").on('change',function(){
+			// Task 19
+			z++
+			if (z=1) {
+				$("ul#posts").empty();
+			}
 		$.ajax('http://jsonplaceholder.typicode.com/posts?userId=' + ($("input#newInput").val() ), {
 			method: 'GET'
 		}).then(processResponse2, handleError);
