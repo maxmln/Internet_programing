@@ -120,5 +120,11 @@ $(document).ready(function() {
 								});
 				}
 	});
+	// Task 17
+	
+	var $element = $("<input id='newInput' />");
+	var div = $("div#dynamiccontent");
+	div.prepend($element);
+	
 	
 });
