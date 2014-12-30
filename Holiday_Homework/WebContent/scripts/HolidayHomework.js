@@ -63,8 +63,10 @@ $(document).ready(function() {
 	
    
 	// Task 12
+	var count = 0;
+	var count2=0;
 	$("button#addbutton").click(function() {
-				var count = 0;
+				
 				var name = $('input#textinput').val();
                
                 if(!name) {
@@ -72,7 +74,6 @@ $(document).ready(function() {
                         return;
                 }else{ //Task 13
 						var newId=0;
-						count++;
                          $.ajax('http://jsonplaceholder.typicode.com/posts', {
                                   method: 'POST',
                                   data: {
@@ -86,26 +87,38 @@ $(document).ready(function() {
 										newId = data.id;
 										
                                         //Task 14
-                                        var id = ($(data).attr("id"))
                                         $.ajax('http://jsonplaceholder.typicode.com/posts'+newId, {
                                                 method: "GET"  
                                                 }).then(function(data2){
+														count++;
                                                         var list = $("ul#posts");
-														
-                                                                var newElement = $("<li>"+(data.title)+"</li><button id='delete"+count+"' >X</button>");
-                                                                list.append(newElement);
+														var newElement = $("<li>"+(data.title)+"</li><button id='delete"+count+"' >X</button>");
+                                                        list.append(newElement);
 																
 														// Task 15
+														
 														for(var i=1;i<=count;i++){
 															$("button#delete"+i).click(function(){
-																alert("deleting");
-																throw new Error("error");
+																// Task 16
+																if (confirm("Press OK to delete") == true) {
+																	$.ajax('http://jsonplaceholder.typicode.com/posts/'+(data.id), {
+																		method: 'DELETE'
+																	}).then(function(){
+																		$("button#delete"+(i-1)).remove();	
+																		$('ul#posts li:nth-last-child('+(i-1)+')').remove();
+																		
+																	});
+						
+																}
+																
+																//throw new Error("error");
 															});
 														}
                                                                
                                                        
                                                 });
-                });
-        }
-});
+								});
+				}
+	});
+	
 });
