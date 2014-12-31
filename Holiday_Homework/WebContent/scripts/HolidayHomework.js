@@ -85,7 +85,6 @@ $(document).ready(function() {
                                 }).then(function(data) {
                                         console.log("Data send")
 										newId = data.id;
-										
                                         //Task 14
                                         $.ajax('http://jsonplaceholder.typicode.com/posts'+newId, {
                                                 method: "GET"  
@@ -101,17 +100,16 @@ $(document).ready(function() {
 															$("button#delete"+i).click(function(){
 																// Task 16
 																if (confirm("Press OK to delete") == true) {
-																	$.ajax('http://jsonplaceholder.typicode.com/posts/'+(data.id), {
+																	$.ajax('http://jsonplaceholder.typicode.com/posts/'+(data2.id), {
 																		method: 'DELETE'
 																	}).then(function(){
 																		$("button#delete"+(i-1)).remove();	
-																		$('ul#posts li:nth-last-child('+(i-1)+')').remove();
+																		$("ul li:nth-last-child(1)").remove();
 																		
 																	});
 						
 																}
 																
-																//throw new Error("error");
 															});
 														}
                                                                
@@ -140,5 +138,40 @@ $(document).ready(function() {
 			method: 'GET'
 		}).then(processResponse2, handleError);
 	});
+	// Task 20
 	
+	var z2=0;
+	function processResponse2(response) {
+		var list = $('ul#posts');
+
+		$.each(response, function(){
+			z2++;
+			
+			var newElement = $("<li id='li"+z2+"'/>");
+			newElement.text(this.title);
+			list.append(newElement);
+
+			var list2 = $('ul#posts');
+			var newElement = $("<button id='delete"+z2+"' >X</button>");
+			list2.append(newElement);
+
+			for (var i=1; i<=c2; i++) {
+
+				$("button#del"+i).click(function(){
+					var x;
+					if (confirm("Press a button!") == true) {
+						$.ajax('http://jsonplaceholder.typicode.com/posts/' + (this.id), {
+							method: 'DELETE'
+						}).then(function(){
+							$("button#delete"+(i-1)).toggle();	
+							$("ul#li"+(i-1)).toggle();	
+						});
+					} 
+				});
+			}
+
+			return false;
+			
+		});
+	}
 });
