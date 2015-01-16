@@ -13,9 +13,10 @@ $(document).ready(function () {
 				type: 'POST',
 				data: {
 					text: userText,	
+				},
+				success: function (data) { 
+					$('#info-div').html("The MD5 of "+data.original+" is "+data.md5);
 				}
-			}).then(function (data) { 
-					$('#info-div').html("The MD5 of "+data.text+" is "+data.text.md5);
 			});
 		}
 	});
