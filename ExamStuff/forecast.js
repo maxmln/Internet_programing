@@ -16,21 +16,21 @@ $(document).ready(function () {
 	  		method: "GET"
 			}).then(function(data){
 	
-			if(data.cod=="404"){
-				$('#info-div').html("City not found");
+			if(!data.list){
+				$("#temps").empty();
+				$('#temps').append("City not found");
 			}
 			else{
+				$("#temps").empty();
 				console.log(data);
-				for (var i = 0; i < data.list.length; i++) {
-					console.log(data.list[i]);
-					var newElement = $("<li>"+JSON.stringify(data.list[i].clouds)+"</li>");
-					$('#list1').append(newElement);
-				};
-				//$('#list1').html("Weather data:<br/>"+"Sunrice: "+sunriseHours+":"+sunriseMinutes+"<br/>" + "Sunset: "+sunsetHours+":"+sunsetMinutes+"<br/>" + "min temp: "+tempMin+"<br/>" + "max temp: "+tempMax+"<br/>" + "wind speed: "+windSpeed);
+				for(var i=0;i<data.list.length;i++){
+					console.log(data.list[i].temp);
+					//$("#temps").append("<li>day "+i+" : "+(JSON.stringify(data.list[i].temp.day) - 273)+" min: "+(JSON.stringify(data.list[i].temp.min) - 273)+" clouds: "+JSON.stringify(data.list[i].clouds)+"</li>");
+					var newElement = $("<li>"+JSON.stringify(data.list[i].deg)+"</li>");
+					$('#temps').append(newElement);
+				}
 			}
 			});
 		}
-
 	});
-
 });
