@@ -14,11 +14,11 @@ $(document).ready(function () {
 				data: {
 					text: userText,	
 				},
-				success: function (data) { 
-					$('#info-div').html("The MD5 of "+data.original+" is "+data.md5);
+				success: function (data) {
+					$("#info-div").empty();
+					$('#info-div').append("<li>The MD5 of "+data.original+" is "+data.md5+"</li>");
 				}
 			});
 		}
 	});
-
 });
