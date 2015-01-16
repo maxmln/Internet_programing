@@ -15,8 +15,8 @@ $(document).ready(function () {
 					text: userText,	
 				},
 				success: function (data) {
-					$("#info-div").empty();
-					$('#info-div').append("<li>The MD5 of "+data.original+" is "+data.md5+"</li>");
+					$("#list1").empty();
+					$('#list1').append("<li>The MD5 of "+data.original+" is "+data.md5+"</li>");
 				}
 			});
 		}
