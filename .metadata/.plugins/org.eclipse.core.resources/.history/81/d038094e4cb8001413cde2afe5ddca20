@@ -25,15 +25,9 @@
 				</div>			
 			</div>
 			<div class="row">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Example source</h3>
-					</div>
-					<div class="panel-body">
-						<pre id="exampleSource">
-							Please select file to show
-						</pre>
-					</div>
+				<div class="alert alert-warning alert-dismissible fade in" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<strong>Original Bootstrap Alert!</strong> Hello world
 				</div>			
 			</div>
 		</div>
@@ -43,6 +37,6 @@
 		<script type="text/javascript"
 			src="libs/bootstrap.js"></script>
 		<script type="text/javascript"
-			src="scripts/ajaxFetch.js"></script>
+			src="scripts/dismissAlert.js"></script>
 	</body>
 </html>
