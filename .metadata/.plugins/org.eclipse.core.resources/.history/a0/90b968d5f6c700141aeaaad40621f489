@@ -1,0 +1,5 @@
+package org.elsysbg.ip.jsonplaceholder.rest.copy;
+
+public class PostRest {
+
+}
