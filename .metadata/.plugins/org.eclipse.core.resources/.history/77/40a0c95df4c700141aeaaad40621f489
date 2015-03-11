@@ -1,0 +1,5 @@
+package org.elsysbg.ip.jsonplaceholder.service.copy;
+
+public class PostsService {
+
+}
