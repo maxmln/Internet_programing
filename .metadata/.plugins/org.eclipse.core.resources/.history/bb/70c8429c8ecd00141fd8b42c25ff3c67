@@ -41,6 +41,7 @@ public class PostsRest {
 	public List<Post> getPosts() {
 		return postsService.getPosts();
 	}
+	
 	@GET
 	@Path("/{postId}")
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
