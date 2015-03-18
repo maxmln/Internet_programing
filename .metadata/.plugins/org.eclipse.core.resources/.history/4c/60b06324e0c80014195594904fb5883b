@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>World V</title>
+</head>
+<body>
+	<button>Get a photo</button>
+	<button>Upload a photo</button>
+</body>
+</html>
