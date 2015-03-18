@@ -66,10 +66,7 @@ public class PostsRest {
 		Post post) {
 		return postsService.updatePost(postId, post);
 	}
-	
-	@DELETE
-	@Path("/{postId}")
-	public void deletePost(@PathParam("postId") long postId) {
+	public void deletePost(long postId) {
 		postsService.deletePost(postId);
 	}
 }

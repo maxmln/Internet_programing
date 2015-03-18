@@ -10,7 +10,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.PUT;
-import javax.ws.rs.DELETE;
 
 import org.elsysbg.ip.jsonplaceholder.Services;
 import org.elsysbg.ip.jsonplaceholder.model.Post;
@@ -66,10 +65,7 @@ public class PostsRest {
 		Post post) {
 		return postsService.updatePost(postId, post);
 	}
-	
-	@DELETE
-	@Path("/{postId}")
-	public void deletePost(@PathParam("postId") long postId) {
+	public void deletePost(long postId) {
 		postsService.deletePost(postId);
 	}
 }
