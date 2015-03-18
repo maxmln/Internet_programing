@@ -34,7 +34,7 @@ public class Services {
 		// lazy loading
 		if (entityManagerFactory == null) {
 			try {
-				Class.forName("org.apache.derby.jdbc.ClientDriver");
+				Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
 			} catch (ClassNotFoundException e) {
 				throw new IllegalStateException("No driver", e);
 			}
