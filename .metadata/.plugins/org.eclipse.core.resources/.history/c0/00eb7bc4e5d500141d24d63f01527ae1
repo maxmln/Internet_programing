@@ -1,0 +1,21 @@
+import java.util.List;
+
+
+
+public class PhotoPostService {
+	public List<PhotoPost> getPosts(){
+		return null;
+	}
+	public PhotoPost getPhotoPost(long photoPostId){
+		return null;
+	}
+	public PhotoPost createPhotoPost(PhotoPost photoPost){
+		return null;
+	}
+	public PhotoPost updatePost(PhotoPost photoPost){
+		return null;
+	}
+	public PhotoPost deletePost(long postId){
+		return null;
+	}
+}

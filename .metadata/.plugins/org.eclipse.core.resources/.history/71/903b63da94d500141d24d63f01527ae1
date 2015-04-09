@@ -1,0 +1,6 @@
+
+public class PhotoPost {
+	private long id;
+	//private Author author;
+	private String season;
+}

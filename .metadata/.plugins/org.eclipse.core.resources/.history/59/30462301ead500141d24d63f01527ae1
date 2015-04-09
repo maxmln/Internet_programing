@@ -1,0 +1,15 @@
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+
+public class PhotoPostRest {
+	private PhotoPostService photoPostsService;
+	private Author defaultAuthor;
+	
+	
+	public List<PhotoPost> getPhotoPosts(){
+		return photoPostsService.getPhotoPosts();
+	}
+
+
+}

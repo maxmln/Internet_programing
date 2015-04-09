@@ -1,7 +1,0 @@
-"use strict"
-
-public class testGet {
-	function alertOnClick(id){
-		alert(id);
-	}
-}

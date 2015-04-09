@@ -1,0 +1,8 @@
+package com.worldview.service;
+
+import com.worldview.models.User;
+
+public class PhotoService {
+
+	
+}

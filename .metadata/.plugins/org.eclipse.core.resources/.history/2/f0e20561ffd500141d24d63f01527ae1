@@ -1,0 +1,5 @@
+package com.worldview.rest;
+
+public class PhotoRest {
+
+}

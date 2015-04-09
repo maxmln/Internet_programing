@@ -1,0 +1,6 @@
+
+public class PhotoPostService {
+	public List<PhotoPost> getPosts(){
+		return null;
+	}
+}

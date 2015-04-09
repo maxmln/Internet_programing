@@ -1,0 +1,17 @@
+package com.worldview.rest;
+
+import com.worldview.models.User;
+import com.worldview.service.PhotoService;
+
+public class PhotoRest {
+	private PhotoService photoService;
+	private User defaultAuthor;
+	
+	public PhotoRest(){
+		photoService = new PhotoService();
+		defaultAuthor = new User();
+		defaultAuthor.setUsername("hello@world");
+		defaultAuthor.setPassword("secret");
+	}
+	
+}

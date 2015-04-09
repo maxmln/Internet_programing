@@ -1,0 +1,12 @@
+import java.util.List;
+
+public class PhotoPostRest {
+	private final PhotoPostService photoPostsService;
+	
+	
+	public List<PhotoPost> getPhotoPosts(){
+		return null;
+	}
+
+
+}

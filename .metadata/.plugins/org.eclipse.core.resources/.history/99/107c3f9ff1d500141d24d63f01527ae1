@@ -1,0 +1,9 @@
+
+public class Test {
+	private PhotoPost post = new PhotoPost();
+	private Author author = new Author();
+
+	public Test(){
+		post.setAuthor(author);
+	}
+}

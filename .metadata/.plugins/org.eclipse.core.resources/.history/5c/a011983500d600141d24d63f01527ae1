@@ -1,0 +1,30 @@
+package com.worldview.rest;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+
+import com.worldview.models.Photo;
+import com.worldview.models.User;
+import com.worldview.service.PhotoService;
+
+public class PhotoRest {
+	private PhotoService photosService;
+	private User defaultAuthor;
+	
+	public PhotoRest(){
+		photosService = new PhotoService();
+		defaultAuthor = new User();
+		defaultAuthor.setUsername("hello@world");
+		defaultAuthor.setPassword("secret");
+	}
+	
+	@GET
+	@Path("/")
+	public List<Photo> getPhotos(){
+		//return photosService.getPhoto();
+		return null;
+	}
+	
+}

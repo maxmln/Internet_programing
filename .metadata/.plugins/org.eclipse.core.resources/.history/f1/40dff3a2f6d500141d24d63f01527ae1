@@ -1,0 +1,5 @@
+package com.worldview.models;
+
+public class Post {
+
+}

@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
+<fullyQualifiedTypeName name="PhotoPostRest"/>
+<fullyQualifiedTypeName name="PhotoPostService"/>
+<fullyQualifiedTypeName name="Services"/>
+<fullyQualifiedTypeName name="PhotoPost"/>
+<fullyQualifiedTypeName name="Test"/>
+<fullyQualifiedTypeName name="Author"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="com.worldview.models.User"/>
+<fullyQualifiedTypeName name="com.worldview.service.PhotoService"/>
+<fullyQualifiedTypeName name="javax.ws.rs.GET"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.worldview.models.Photo"/>
 </qualifiedTypeNameHistroy>

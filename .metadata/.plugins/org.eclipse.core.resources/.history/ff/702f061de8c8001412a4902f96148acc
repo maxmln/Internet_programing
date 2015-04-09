@@ -1,7 +1,0 @@
-"use strict";
-
-$(function(){
-	function alertOnClick(){
-		document.getElementById("getBtnId").innerHTML="Button"
-	}
-});
