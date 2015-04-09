@@ -5285,3 +5285,9 @@ Binding(CTRL+SHIFT+ARROW_DOWN,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.jdt.ui.javaEditorScope,,,system)
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-04-09 12:18:40.367
+!MESSAGE No projects found for [E:\Git\Internet_programing\07_SampleRest\WebContent\META-INF\context.xml]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-04-09 12:18:52.562
+!MESSAGE No projects found for [E:\Git\Internet_programing\07_SampleRest\WebContent\WEB-INF\web.xml]
