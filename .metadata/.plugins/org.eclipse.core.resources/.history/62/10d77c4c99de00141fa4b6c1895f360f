@@ -55,8 +55,8 @@ public class PostsService {
 			em.close();
 		}
 	}
-	
-	public Post createPost(Post post) {
+	// synchronized because of lastPostId
+	public synchronized Post createPost(Post post) {
 		EntityManager em =
 			emf.createEntityManager();
 		final EntityTransaction tx =
