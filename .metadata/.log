@@ -5034,3 +5034,9 @@ java.lang.NullPointerException
 	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
 	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2015-04-09 12:14:47.628
+!MESSAGE No valid Android XML Editor Delegate found for file /07_SampleRest/WebContent/META-INF/context.xml [Res null, type null]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2015-04-09 12:14:56.543
+!MESSAGE No projects found for [E:\Git\Internet_programing\07_SampleRest\WebContent\META-INF\context.xml]
