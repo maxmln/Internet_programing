@@ -1,5 +1,8 @@
 package org.elsysbg.ip.jsonplaceholder.rest;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 import org.elsysbg.ip.jsonplaceholder.ServicesTestHelper;
 import org.elsysbg.ip.jsonplaceholder.model.Post;
 import org.elsysbg.ip.jsonplaceholder.service.PostsService;
@@ -47,9 +50,8 @@ public class PostsRestTest {
 				return result;
 			}
 		});
-//		final Post result =
-		// TODO
-			postsRest.createPost(null, post);
+	//	final Post result =
+			postsRest.createPost(post);
 		
 		// check if postsService.createPost() is called
 		Mockito.verify(postsService).createPost(post);
